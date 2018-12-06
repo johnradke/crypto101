@@ -40,6 +40,50 @@ cipher with a key of 3, my alphabet looks like this:
 
 ```
 A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
-D E F G H I J K L M N O P Q R S T U V W X Y Z A B C
+X Y Z A B C D E F G H I J K L M N O P Q R S T U V W
 ```
 
+So let's say me and Ms. Raidbard know beforehand that we'll always use a Caesar cipher and
+our secret key is 3. If my message is THE PARTY STARTS AT NOON, I *encrypt* it like this
+
+```
+T H E   P A R T Y   S T A R T S   A T   N O O N
+Q E B   M X O Q V   P Q X O Q P   X Q   K L L K
+```
+So I send Ms. Raidbard this message. Now Ms. Raidbard needs to *DEcrypt* it.
+
+**(Erase the plaintext)**
+
+She knows that it's a Caesar cipher and the secret
+key is three, so she just does the same process, only backwards:
+
+```
+Q E B   M X O Q V   P Q X O Q P   X Q   K L L K
+T H E   P A R T Y   S T A R T S   A T   N O O N
+```
+
+-------
+
+Another kind of cipher is a **Caesar box cipher**. Let's say we have the same message. I
+*encrypt* it by first writing in a box like this:
+
+```
+T R A T
+H T R N
+E Y T O
+P S S O
+A T A N
+```
+
+Now I just write the letters left-to-right:
+
+TRAT HTRN EYTO PSSO ATAN
+
+To *decrypt* it, Ms. Raidbard can just do the same thing I did:
+
+T H E P A
+R T Y S T
+A R T S A
+T N O O N
+
+to get THE PARTY STARTS AT NOON
