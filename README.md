@@ -119,3 +119,6 @@ Bonus stuff:
 do you get the original message out?
 * Even those of us who consider ourselves "the good guys" need to know how to
 do it so that we can design cryptography that's really hard to crack
+* One really cool kind of cryptography we use every day is called *assymmetric* encryption
+* That's where you use one key to encrypt and a *different* one to decrypt
+* I give the public key out to everyone in the world, and keep the private one very secret
