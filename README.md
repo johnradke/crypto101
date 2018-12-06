@@ -64,6 +64,23 @@ T H E   P A R T Y   S T A R T S   A T   N O O N
 
 -------
 
+* Caesar cipher is a type of *substitution cipher*
+* Can easily crack a Caesar cipher because there's only 25 different keys
+* Even with pen and paper you can try out all 25 options in just a few minutes
+* Another kind is a *keyword* cipher
+* In this case, the key is just a word, like ZEBRAS
+
+```
+A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+Z E B R A S C D F G H I J K L M N O P Q T U V W X Y
+```
+
+* The best substitution cipher is a totally random one
+* **(do example on board)**
+* The key is very long and hard to remember
+
+-------
+
 Another kind of cipher is a **Caesar box cipher**. Let's say we have the same message. I
 *encrypt* it by first writing in a box like this:
 
@@ -87,3 +104,18 @@ A R T S A
 T N O O N
 
 to get THE PARTY STARTS AT NOON
+
+------
+
+ACTIVITY
+
+--------
+
+Bonus stuff:
+
+* Important for computer programmers to understand how ciphers like this work
+* Even more important, we need to know how to *crack* them
+* *Cracking* means given an encrypted message without the encryption key, how
+do you get the original message out?
+* Even those of us who consider ourselves "the good guys" need to know how to
+do it so that we can design cryptography that's really hard to crack
