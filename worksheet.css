@@ -1,0 +1,53 @@
+table {
+    font-size: 18pt;
+    margin-left: 10px;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-clear {
+    clear: both;
+}
+
+body {
+    font-size: 18pt;
+}
+
+td {
+    text-align: center;
+    padding: 3px;
+    min-width: 1em;
+}
+
+.key td {
+    border: 1px solid;
+}
+
+.key {
+    border-collapse: collapse;
+    margin-bottom: 1em;
+}
+
+.plain-text td {
+    font-weight: bold;
+}
+
+.cipher-text td {
+    border-bottom: 1px solid;
+    font-family: 'Comic Sans MS';
+}
+
+.cipher-text td.dot {
+    border-bottom: 1px solid white;
+    font-family: 'Comic Sans MS';
+}
+
+p:first-of-type {
+    margin-top: 0;
+}
+
+div {
+    margin-bottom: 10px;
+}
