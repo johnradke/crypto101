@@ -1,0 +1,119 @@
+<html>
+<head>
+	<style>
+		table {
+			font-size: 18pt;
+			margin-left: 10px;
+		}
+		.float-left {
+			float: left;
+		}
+		.float-clear {
+			clear: both;
+		}
+		body {
+			font-size: 18pt;
+		}
+		td{
+			text-align: center;
+			padding: 3px;
+		}
+		.key td {
+			border: 1px solid;
+		}
+		.key {
+			border-collapse: collapse;
+		}
+		.plain-text td {
+			font-weight: bold;
+		}
+		.cipher-text td {
+			border-bottom: 1px solid;
+			font-family: 'Comic Sans MS';
+		}
+		.cipher-text td.dot {
+			border-bottom: 1px solid white;
+			font-family: 'Comic Sans MS';
+		}
+	</style>
+	<script>
+		function writeCells(text) {
+			document.write(stringToCells(text));
+		}
+		function stringToCells(text) {
+			return text.split('').map(charToCell).join('')
+		}
+		function charToCell(c) {
+			if (c === ',') {
+				return `<td class="dot">${c}</td>`
+			}
+			
+			return `<td>${c}</td>`
+		}
+		function makeBlanks(cipherText, plainText, dontFloat) {
+			if (!cipherText) {
+				var cipherTextCells = [...Array(plainText.length).keys()].map(_ => '<td>&nbsp;</td>').join('');
+			} else if (cipherText.length !== plainText.length) {
+				throw "lengths do not match!";
+			} else {
+				var cipherTextCells = stringToCells(cipherText);
+			}
+			var plainTextCells = stringToCells(plainText);
+			
+			document.write(`<table class="float-left">
+	<tbody>
+	<tr class="cipher-text">
+		${cipherTextCells}
+	</tr>
+	<tr class="plain-text">
+		${plainTextCells}
+	</tr>
+	</tbody>
+</table>`);
+		}
+	</script>
+</head>
+<body>
+<h1>Substitution Cipher</h1>
+
+<p>Your secret key is:</p>
+<table class="key">
+	<tr>
+		<script>writeCells("ABCDEFGHIJKLMNOPQRSTUVWXYZ");</script>
+	</tr>
+	<tr>
+		<script>writeCells("IRBZLXAKFYGQCMUDPVOETNHWJS");</script>
+	</tr>
+</table>
+
+<p>So for example, the secret message <strong>THE PARTY STARTS AT NOON</strong> would be encrypted like this:
+
+<div>
+<script>
+	makeBlanks("THE", "EKL");
+	makeBlanks("PARTY", "DIVEJ");
+	makeBlanks("STARTS", "OEIVEO");
+	makeBlanks("AT", "IE");
+	makeBlanks("NOON", "MUUM");
+</script>
+</div>
+<div class="float-clear"></div>
+<div style="margin-top: 60px;">
+<p>Using the key above, <strong>decrypt the answer to the following joke:</strong><p>
+
+<p>Question: What did one ocean say to the other?</p>
+
+<p>Answer:</p>
+</div>
+
+<div>
+<script>
+	makeBlanks("       ,", "MUEKFMA,");
+	makeBlanks(null, "FE");
+	makeBlanks(null, "YTOE");
+	makeBlanks(null, "HINLZ");
+</script>
+</div>
+
+</body>
+</html>
