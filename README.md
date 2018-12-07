@@ -98,10 +98,12 @@ TRAT HTRN EYTO PSSO ATAN
 
 To *decrypt* it, Ms. Raidbard can just do the same thing I did:
 
+```
 T H E P A
 R T Y S T
 A R T S A
 T N O O N
+```
 
 to get THE PARTY STARTS AT NOON
 
